@@ -117,6 +117,7 @@ build_install_ovmf()
 	}
 
 	pushd ovmf >/dev/null
+		run_cmd git apply ../ovmf.patch
 		run_cmd make -C BaseTools
 		. ./edksetup.sh --reconfig
 		run_cmd $BUILD_CMD
