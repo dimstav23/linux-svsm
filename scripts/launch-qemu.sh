@@ -19,6 +19,8 @@ SVSM=""
 CONSOLE="serial"
 UEFI_BIOS_CODE="./usr/local/share/qemu/OVMF_CODE.fd"
 UEFI_BIOS_VARS="./usr/local/share/qemu/OVMF_VARS.fd"
+#UEFI_BIOS_CODE="/run/libvirt/nix-ovmf/OVMF_CODE.fd"
+#UEFI_BIOS_VARS="/run/libvirt/nix-ovmf/OVMF_VARS.fd"
 BIOS_DEBUG=""
 VNC_PORT=""
 ALLOW_DEBUG=""
@@ -28,6 +30,8 @@ SEV_POLICY=""
 SNP_FLAGS="0"
 
 QEMU_INSTALL_DIR="./usr/local/bin/"
+
+echo $LD_LIBRARY_PATH
 
 usage() {
 	echo "$0 [options]"

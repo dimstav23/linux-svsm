@@ -2,7 +2,7 @@
 
 GCC		= gcc
 
-SHELL		:= /bin/bash
+SHELL		:= ${SHELL}
 
 A_FLAGS		:= -D__ASSEMBLY__
 
@@ -57,7 +57,7 @@ prereq: .prereq
 
 .prereq:
 	curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
-	source $(HOME)/.cargo/env
+	#source $(HOME)/.cargo/env
 	echo "source $(HOME)/.cargo/env" >> ~/.bashrc
 	rustup component add rust-src
 	rustup component add llvm-tools-preview
