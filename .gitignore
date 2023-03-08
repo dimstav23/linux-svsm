@@ -63,3 +63,8 @@ dkms.conf
 # Others
 *.lds
 .prereq
+
+# Submodules and install dirs
+scripts/ovmf
+scripts/qemu
+scripts/usr
